@@ -9,28 +9,54 @@
       href="https://fonts.googleapis.com/css?family=Lato&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css"
+      integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
       <div class="container">
-        <img src="logo.png" alt="logo" />
+        <img src="img/logo.png" alt="logo" />
       </div>
     </header>
 
-    <div class="cds-container container">
-      <!-- Disco ad esempio -->
-      <div class="cd">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/en/9/9f/Ten_Summoner%27s_Tales.jpg"
-          alt=""
-        />
-        <h3>Ten's Summoners Tales</h3>
-        <span class="author">Sting</span>
-        <span class="year">1993</span>
-      </div>
+    <div class="select_wrapper">
+      <label for="pet-select"
+        ><i class="fas fa-arrow-circle-down"></i> Which genre do you want to
+        listen? <i class="fas fa-arrow-circle-down"></i
+      ></label>
+      <select class="" name="Genere">
+        <option value="All">--Please choose an option--</option>
+        <option value="Jazz">Jazz</option>
+        <option value="Pop">Pop</option>
+        <option value="Rock">Rock</option>
+        <option value="Metal">Metal</option>
+      </select>
     </div>
 
-    <script src="main.js" charset="utf-8"></script>
+    <div class="cds-container container"></div>
+
+    <script id="entry-template" type="text/x-handlebars-template">
+      <div class="cd">
+        <img src="{{poster}}" alt="" />
+        <h3>
+          {{title}}
+        </h3>
+        <span class="author">
+          {{author}}
+        </span>
+        <span class="year">
+          {{year}}
+        </span>
+        <span class="genre display_none">
+          {{genre}}
+        </span>
+      </div>
+    </script>
+    <script src="js/main.js" charset="utf-8"></script>
   </body>
 </html>

@@ -66,3 +66,23 @@ header img {
 .cd span.year {
   color: grey;
 }
+.select_wrapper {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+label {
+  color: #fff;
+  font-size: 30px;
+  display: block;
+  margin-bottom: 20px;
+}
+select {
+  width: 50%;
+  text-align: center;
+  font-size: 25px;
+  border-radius: 10px;
+  padding: 10px 8px;
+  color: #fff;
+  background-color: rgb(35, 228, 9);
+}
